@@ -9,21 +9,16 @@ function getBotResponse(input) {
     }
 
     // Simple responses
-    if (input.toLowerCase() === "hello") {
+    if (input.toLowerCase() === "hello" || input.toLowerCase() === "salut" || input.toLowerCase() === "hi") {
         return "Hello there!";
-    } else if (input.toLowerCase() === "goodbye") {
-        return "Talk to you later!";
+    } else if (input.toLowerCase() === "goodbye" || input.toLowerCase() === "bye" || input.toLowerCase() === "goodnight" || input.toLowerCase() === "good night" || input.toLowerCase() === "good bye") {
+        const responses = ["Talk to you later!", "Goodbye", "Good night", "Bye", "See you later"];
+        const randomIndex = Math.floor(Math.random() * responses.length);
+        return responses[randomIndex];
     } else if (input.toLowerCase() === "clear") {
-        // Очистити чат і повернути порожній рядок
         document.getElementById("chatbox").innerHTML = "";
         return "The chat has been cleared";
-    } else if (
-        input.toLowerCase() === "how are you?" ||
-        input.toLowerCase() === "how are you doing?" ||
-        input.toLowerCase() === "how are u" ||
-        input.toLowerCase() === "how do you feel?" ||
-        input.toLowerCase() === "how do you feel"
-    ) {
+    } else if (input.toLowerCase() === "how are you?" ||  input.toLowerCase() === "how are you doing?" || input.toLowerCase() === "how are u" || input.toLowerCase() === "how do you feel?" || input.toLowerCase() === "how do you feel") {
         return "I'm doing well, thank you!";
     } else if (input.toLowerCase() === "what's your name?") {
         return "My name is ChatBot.";
