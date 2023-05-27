@@ -12,7 +12,7 @@ function getBotResponse(input) {
     if (input.toLowerCase() === "hello" || input.toLowerCase() === "salut" || input.toLowerCase() === "hi") {
         return "Hello there!";
     } else if (input.toLowerCase() === "goodbye" || input.toLowerCase() === "bye" || input.toLowerCase() === "goodnight" || input.toLowerCase() === "good night" || input.toLowerCase() === "good bye") {
-        const responses = ["Talk to you later!", "Goodbye", "Good night", "Bye", "See you later"];
+        const responses = ["Talk to you later!", "Goodbye!", "Good night!", "Bye!", "See you later!"];
         const randomIndex = Math.floor(Math.random() * responses.length);
         return responses[randomIndex];
     } else if (input.toLowerCase() === "clear") {
