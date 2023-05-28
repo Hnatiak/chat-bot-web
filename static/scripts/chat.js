@@ -16,9 +16,19 @@ for (let i = 0; i < coll.length; i++) {
     });
 }
 
+// Adds user message to the chatbox and gets bot's response
+function getResponse() {
+
+    setTimeout(() => {
+        getHardResponse(userText);
+        scrollToBottom(); // Auto-scroll to the bottom
+    }, 1000);
+}
+
+// Auto-scroll to the bottom of the chatbox
 function scrollToBottom() {
-    var chatBarBottom = document.getElementById("chat-bar-bottom");
-    chatBarBottom.scrollIntoView({ behavior: "smooth", block: "end" });
+    var chatbox = document.getElementById("chatbox");
+    chatbox.scrollTop = chatbox.scrollHeight;
 }
 
 function getTime() {
