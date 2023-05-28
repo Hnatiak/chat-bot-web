@@ -1,5 +1,5 @@
 var coll = document.getElementsByClassName("collapsible");
-document.getElementById("chat-bar-bottom").scrollIntoView(true);
+// document.getElementById("chat-bar-bottom").scrollIntoView(true);
 
 for (let i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function () {
@@ -14,6 +14,11 @@ for (let i = 0; i < coll.length; i++) {
         }
 
     });
+}
+
+function scrollToBottom() {
+    var chatBarBottom = document.getElementById("chat-bar-bottom");
+    chatBarBottom.scrollIntoView({ behavior: "smooth", block: "end" });
 }
 
 function getTime() {
