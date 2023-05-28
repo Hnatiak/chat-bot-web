@@ -1,4 +1,5 @@
 var coll = document.getElementsByClassName("collapsible");
+document.getElementById("chat-bar-bottom").scrollIntoView(true);
 
 for (let i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function () {
