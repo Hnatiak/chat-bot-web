@@ -32,7 +32,8 @@
     text-align: center;
     overflow: auto;
     scrollbar-width: none;
-    max-height: 400px;
+/*     max-height: 400px; */
+    height: max-content;
     transition: max-height 0.2s ease-out;
 }
 
